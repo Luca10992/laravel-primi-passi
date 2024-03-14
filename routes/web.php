@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $title = 'Homepage';
-    return view('home', compact('title'));
+    $title = 'Laravel';
+    $links = config('links');
+    return view('home', compact('title', 'links'));
 });
